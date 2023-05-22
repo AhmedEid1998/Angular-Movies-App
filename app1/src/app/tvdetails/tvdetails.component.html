@@ -1,0 +1,53 @@
+
+<section *ngIf="!loading" class="loading justify-content-center align-items-center">
+    <div class="spnr lds-facebook"><div></div><div></div><div></div></div>
+</section>
+
+
+<div class="container pt-5 ">
+    <div class="row pt-4">
+
+        <div class="col-lg-3 text-center">
+            <img [src]="imgComplete+details.poster_path" class="rounded-5 w-100">
+            <img [src]="imgComplete+details.backdrop_path" class="w-75 mt-2 rounded-pill">
+        </div>
+    
+        <div class="col-lg-8 offset-1 my-4">
+            <h2 class="fw-bold mb-4">{{details.name}}</h2>
+            <p class="w-75">{{details.overview}}</p>
+            <h3 class="fw-bold mt-4">Genres:  </h3>
+            <ul class="mb-4">
+                <li *ngFor="let g of details.genres">
+                    {{g.name}}
+                </li>
+            </ul>
+            
+            <div class="my-3">
+                <h3 class="d-inline fw-bold ">Presentation Date :  </h3>
+                <span class="  mx-3">{{details.first_air_date}} </span>
+            </div>
+    
+            <div class="my-3 w-75">
+                <h3 class="d-inline fw-bold ">Spoken Languages :  </h3>
+                <span ><p class="d-inline text-bg-info p-1 rounded-3">{{details.original_language}}</p></span>
+                <span  *ngFor="let language of details.spoken_languages" class="mx-3">
+                    <p class="d-inline">{{language.name}}</p>
+                </span>
+            </div>
+    
+            <div class="my-3">
+                <h3 class="d-inline fw-bold ">Production Companies :  </h3>
+                <span  *ngFor="let company of details.production_companies" class="mx-3">
+                    <p class="d-inline">{{company.name}}</p>
+                </span>
+            </div>
+
+            <div class="my-3">
+                <h3 class=" d-inline fw-bold">Popularity :  </h3>
+                <span>{{details.popularity}}</span>
+            </div>
+ 
+        </div>
+    
+    </div>
+</div>

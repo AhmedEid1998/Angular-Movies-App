@@ -1,0 +1,31 @@
+<div class="container logmain pt-5">  
+    <h2 class="mt-5">Login Now</h2>
+    <div *ngIf="error" class="alert alert-danger py-2" >
+        <h3>{{error}}</h3>
+    </div>
+
+    <form (ngSubmit)="submitLogin(loginForm)" [formGroup]="loginForm" class="mb-5">
+
+        <label class="mt-3" for="email">Email</label>
+        <input class="form-control" formControlName="email" type="email" id="email">
+        <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="alert alert-danger py-2 fw-bold my-2">
+            <p *ngIf="loginForm.get('email')?.errors?.['required']" class="mb-0">Email is required</p>
+        </div>
+
+        <label class="mt-3" for="password">Password</label>
+        <input class="form-control" formControlName="password" type="password" id="password">
+        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="alert alert-danger py-2 fw-bold my-2">
+            <p *ngIf="loginForm.get('password')?.errors?.['required']" class="mb-0">Password is required</p>
+            <p *ngIf="loginForm.get('password')?.errors?.['pattern']" class="mb-0">Password Must Start Uppercase And 5 Numbers</p>
+        </div>
+
+        <label class="mt-3" for="rePassword">Repassword</label>
+        <input class="form-control" formControlName="rePassword" type="password" id="rePassword">
+        <div *ngIf="loginForm.get('rePassword')?.errors && loginForm.get('rePassword')?.touched" class="alert alert-danger py-2 fw-bold my-2">
+            <p *ngIf="loginForm.get('rePassword')?.errors?.['required']" class="mb-0">Repassword is required</p>
+            <p *ngIf="loginForm.get('rePassword')?.getError('passwordMatch')" class="mb-0">Repassword Must Matched To Password</p>
+        </div> 
+
+        <button [disabled]="loginForm.invalid" class="btn btn-info my-5 fw-bold">Login</button>  
+    </form>
+</div>

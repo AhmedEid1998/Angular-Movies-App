@@ -1,0 +1,44 @@
+
+
+<section *ngIf="!loading" class="loading justify-content-center align-items-center">
+    <div class="spnr lds-facebook"><div></div><div></div><div></div></div>
+</section>
+
+
+<div class="container pt-5">
+
+    <div class="row pt-5">
+
+        <div class="d-flex justify-content-start align-items-center py-0 col-lg-5 offset-1">
+            <div>
+                <div class="brdr  w-25 mb-4"></div> 
+                    <h2 class="h1 brdrh2 fw-bold">Hollywood <br> stars <br> to Watch Now</h2>
+                    <p class="h6 text-muted fw-bold">Hollywood stars Tv to Watch Now</p> 
+                <div class="brdr w-100 mb-4"></div>
+            </div>
+        </div>
+
+
+        <div *ngFor="let person of trendingPeople" class="col-lg-3 col-md-4 py-4">   
+            <a [routerLink]="['/peopledetails', person.id]">
+                <div class="position-relative">   
+
+                    <div class="position-relative">
+                        <div class="scnd-lyr d-flex justify-content-center align-items-center rounded-pill ">
+                            <h4 class="h3 text-info fw-bolder scnd-lyrh4">Show Details</h4>
+                        </div>
+                        <img [src]="imgComplete+person.profile_path" class="w-100 rounded-pill">
+                    </div>
+
+
+
+                    <h3 class="h6 fw-bolder my-3 text-center">{{person.name}}</h3>
+                </div>
+            </a> 
+        </div>
+
+    </div>
+    
+
+
+</div>

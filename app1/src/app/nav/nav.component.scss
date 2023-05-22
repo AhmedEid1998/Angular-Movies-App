@@ -1,0 +1,175 @@
+
+.stngs-hvr{
+    border-radius: 25px ;
+    margin-left:  10px;
+    margin-right:  10px;
+    width: max-content;
+    transition: 0.3s ease;
+}
+
+.stngs-hvr:hover{
+    background-color: #24baef !important;
+}
+
+
+.activ{
+    background-color: #24baef;
+    position: relative;
+    padding: 4px 6px;
+    border-radius: 10px;
+}
+
+.activ::after{
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #24baef;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+
+.head *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.head{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 99999999 !important;
+    position: fixed;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+.hamburger{
+    display: none;
+}
+
+.hamClr{
+    background-color: #24baef !important;
+    transition: 0.5s !important;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li a{
+    display: block;
+    color: white;
+    padding: 10px 0;
+    border-radius: 50px;
+    transition: 0.5s ease;
+    margin: 0 5px;
+}
+
+.lgout{
+    border: solid 1px #24baef;
+    padding: 8px !important;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.lgout:hover{
+    background-color: #24baef;
+}
+
+@media only screen  and (max-width: 1320px) {
+    .head{
+        padding: 0 50px;
+    }
+}
+
+@media only screen  and (max-width: 1100px) {
+    .head{
+        padding: 0 30px;
+    }
+}
+
+@media only screen  and (max-width: 900px) {
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        transition: 1s !important;
+    }    
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+        transition: 0.3s ease;
+    }
+    .hamburger:hover .line{
+        background-color: #24baef;
+    }
+    .l1x{
+        transform: translateX(15%);
+    }
+    .l2x{
+        transform: translateX(-15%);
+    }
+    .l3x{
+        transform: translateX(15%);
+    }
+
+
+    
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #333;
+        transition: 0.5s ease;
+        overflow: hidden;
+    }
+
+    .nav-bar ul{
+        display: block;
+        margin:  auto;
+        padding-top: 20px;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+        position: absolute;
+    }
+
+
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+    .nav-bar ul li a:hover{
+        background-color: #24baef !important;
+        border-radius: 10px;
+    }
+
+    .nav-bar.active{
+        height: 450px;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+}

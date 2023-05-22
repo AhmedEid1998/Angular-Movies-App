@@ -1,0 +1,51 @@
+
+
+
+
+
+<div class="head fixed-top">
+    <h3 class="mb-0 fw-bolder logo"><a routerLink="/home">NOXE</a></h3> 
+
+    <div class="hamburger">
+        <div *ngIf="isLogin" class="line l1"></div>
+        <div *ngIf="isLogin" class="line l2"></div>
+        <div *ngIf="isLogin" class="line l3"></div>
+    </div>
+
+    <nav *ngIf="isLogin" class="nav-bar">
+
+        <ul *ngIf="isLogin" class="scrl mx-auto mb-0">
+            <li routerLinkActive="activ" class="mx-2">
+                <a routerLink="/home">Home</a>
+            </li>
+            <li routerLinkActive="activ" class="mx-2">
+                <a routerLink="/movies">Movies</a>
+            </li>
+            <li routerLinkActive="activ" class="mx-2">
+                <a routerLink="/tv">TV</a>
+            </li>
+            <li routerLinkActive="activ" class="mx-2">
+                <a routerLink="/people">Actors</a>
+            </li>
+            <li routerLinkActive="activ" class="mx-2">
+                <a routerLink="/gallery">Gallery</a>
+            </li>               
+        </ul>
+
+    </nav>
+
+
+    <ul class=" list-unstyled d-flex mb-0">
+        <li *ngIf="!isLogin" class="mx-2">
+            <a routerLink="/login" class="lgout">Login</a>
+        </li>
+        <li *ngIf="!isLogin" class="mx-2">
+            <a routerLink="/register" class="lgout">Register</a>
+        </li>    
+        <li *ngIf="isLogin" class="mx-2">
+            <a (click)="logoutBridge()" routerLink="/login" class="lgout">Logout</a>
+        </li>                      
+    </ul> 
+
+</div>
+

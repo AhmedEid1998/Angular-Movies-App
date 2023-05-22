@@ -1,0 +1,23 @@
+
+<section *ngIf="!loading" class="loading justify-content-center align-items-center">
+    <div class="spnr lds-facebook"><div></div><div></div><div></div></div>
+</section>
+
+
+<div class="container pt-5 rspnsv ">
+    <div class="row pt-4">
+
+        <div class="col-lg-3">
+            <img [src]="imgComplete+detailsPerson.profile_path" class="w-100 rounded-5">       
+        </div>
+    
+        <div class="col-lg-8 offset-1 my-4">
+            <h2 class="fw-bold mb-4">{{detailsPerson.name}}</h2>
+            <p class="fw-bold w-75">{{detailsPerson.biography?.slice(0,500)}}</p>
+
+            <h3 class="fw-bold my-3 mt-5">Date Of Brith : <span class="fw-normal">{{detailsPerson.birthday}}</span> </h3>
+            <h3 class="fw-bold my-3">Place Of Brith : <span class="fw-normal">{{detailsPerson.place_of_birth}}</span> </h3>
+            <h3 class="fw-bold my-3">Popularity : <span class="fw-normal">{{detailsPerson.popularity}}</span> </h3>
+        </div>
+    </div>
+</div>

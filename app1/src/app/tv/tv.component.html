@@ -1,0 +1,42 @@
+
+
+<section *ngIf="!loading" class="loading justify-content-center align-items-center">
+    <div class="spnr lds-facebook"><div></div><div></div><div></div></div>
+</section>
+
+<div class="container pt-5">
+
+    <div class="row pt-5">
+
+        <div class="d-flex justify-content-start align-items-center py-0 col-lg-5 offset-1">
+            <div>
+                <div class="brdr  w-25 mb-4"></div> 
+                    <h2 class="h1 brdrh2 fw-bold">All TVs <br> to Watch Now</h2>
+                    <p class="h6 text-muted fw-bold">Treanding Tv to Watch Now</p> 
+                <div class="brdr w-100 mb-4"></div>
+            </div>
+        </div>
+
+        <div *ngFor="let tv of trendingTv" class="col-lg-3 col-md-4 py-4">
+            <a [routerLink]="['/tvdetails', tv.id]">
+                <div class="position-relative">
+
+
+                    <div class="position-relative">
+                        <div class="scnd-lyr d-flex justify-content-center align-items-center rounded-4 ">
+                            <h4 class="h3 text-info fw-bolder scnd-lyrh4">Show Details</h4>
+                        </div>
+                        <img [src]="imgComplete+tv.poster_path" class="w-100 rounded-4 ">
+                    </div>
+
+                    <h3 class="h6 fw-bolder my-3 text-center">{{tv.name}}</h3>
+                    <div class=" bg-voting p-2 fw-bold text-center ">{{tv.vote_average}}</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    
+
+
+</div>

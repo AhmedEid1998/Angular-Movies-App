@@ -1,0 +1,100 @@
+
+<app-header [headerTrendingMovies]="trendingMovies" ></app-header>
+
+<section *ngIf="!loading" class="loading justify-content-center align-items-center">
+    <div class="spnr lds-facebook"><div></div><div></div><div></div></div>
+</section>
+
+
+<div class="container">
+
+    <div class="row py-4">
+
+        <div class="d-flex justify-content-start align-items-center py-0 col-lg-4">
+            <div>
+                <div class="brdr  w-25 mb-4"></div> 
+                    <h2 class="brdrh2 fw-bold">Trending <br> Movies <br> to Watch Now</h2>
+                    <p class="text-muted fw-bold">Treanding Movies to Watch Now</p> 
+                <div class="brdr w-100 mb-4"></div>
+            </div>
+        </div>
+
+        <div *ngFor="let movie of trendingMovies" class="col-lg-2 col-md-4 py-4 ">
+            <a  [routerLink]="['/moviedetails', movie.id]">
+
+                <div class="position-relative">
+                    <div class="position-relative">
+                        <div class="scnd-lyr d-flex justify-content-center align-items-center rounded-4">
+                            <h4 class="h6 text-info fw-bolder scnd-lyrh4">Show Details</h4>
+                        </div>
+                        <img [src]="imgComplete+movie.poster_path" class="rounded-4 w-100">
+                    </div>
+                    
+                    <h3 class="h6 fw-bolder my-3 text-center">{{movie.title}}</h3>
+                    <div class=" bg-voting p-2 fw-bold text-center ">{{movie.vote_average}}</div>
+                </div>
+            </a>
+            
+        </div>
+
+    </div>
+
+
+    <div class="row py-4">
+
+        <div class="d-flex justify-content-start align-items-center py-0 col-lg-4">
+            <div>
+                <div class="brdr  w-25 mb-4"></div> 
+                    <h2 class="brdrh2 fw-bold">Trending TVs <br> to Watch Now</h2>
+                    <p class="text-muted fw-bold">Treanding Tv to Watch Now</p> 
+                <div class="brdr w-100 mb-4"></div>
+            </div>
+        </div>
+
+        <div *ngFor="let tv of trendingTv" class="col-lg-2 col-md-4 py-4">
+            <a  [routerLink]="['/tvdetails', tv.id]">
+                <div class="position-relative">
+                    <div class="position-relative">
+                        <div class="scnd-lyr d-flex justify-content-center align-items-center rounded-4">
+                            <h4 class="h6 text-info fw-bolder scnd-lyrh4">Show Details</h4>
+                        </div>
+                        <img [src]="imgComplete+tv.poster_path" class="rounded-4 w-100">
+                    </div>
+                    <h3 class="h6 fw-bolder my-3 text-center">{{tv.name}}</h3>
+                    <div class=" bg-voting p-2 fw-bold text-center ">{{tv.vote_average}}</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    
+    <div class="row pt-4">
+
+        <div class="d-flex justify-content-start align-items-center py-0 col-lg-4">
+            <div>
+                <div class="brdr  w-25 mb-4"></div> 
+                    <h2 class="brdrh2 fw-bold">Trending <br> People <br> to Watch Now</h2>
+                    <p class="text-muted fw-bold">Treanding Tv to Watch Now</p> 
+                <div class="brdr w-100 mb-4"></div>
+            </div>
+        </div>
+
+        <div *ngFor="let person of trendingPeople" class="col-lg-2 col-md-4 py-4">
+            <a [routerLink]="['/peopledetails', person.id]">
+                <div class="position-relative">
+                    <div class="position-relative">
+                        <div class="scnd-lyr d-flex justify-content-center align-items-center rounded-pill">
+                            <h4 class="h6 text-info fw-bolder scnd-lyrh4">Show Details</h4>
+                        </div>
+                        <img [src]="imgComplete+person.profile_path" class="w-100 rounded-pill">
+                    </div>
+                    <h3 class="h6 fw-bolder my-3  text-center">{{person.name}}</h3>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
