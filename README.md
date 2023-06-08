@@ -2,7 +2,6 @@
 movies app with angular & api
 <br>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a>.
 <br>build using Angular material.
-<br>Integrate with Firebase Authentication and realtime databse.
 # Dependencies
 - Angular CLI
 - Register & Login & Logout
