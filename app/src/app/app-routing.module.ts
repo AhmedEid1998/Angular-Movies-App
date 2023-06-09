@@ -12,6 +12,7 @@ import { PeopleComponent } from './people/people.component';
 import { PeopledetailsComponent } from './peopledetails/peopledetails.component';
 import { TvdetailsComponent } from './tvdetails/tvdetails.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { LogGuard } from './guard/log.guard';
 
 const routes: Routes = [
   {path:'',redirectTo:'home', pathMatch:'full'},
@@ -23,10 +24,9 @@ const routes: Routes = [
   {path:'moviedetails/:id', canActivate:[AuthGuard] , component:MoviedetailsComponent},
   {path:'peopledetails/:id', canActivate:[AuthGuard] , component:PeopledetailsComponent},
   {path:'tvdetails/:id', canActivate:[AuthGuard] , component:TvdetailsComponent},
-  {path:'login', component:LoginComponent},
-  {path:'register', component:RegisterComponent},
+  {path:'login', canActivate:[LogGuard], component:LoginComponent},
+  {path:'register', canActivate:[LogGuard], component:RegisterComponent},
   {path:'**', component:NotfoundComponent},
-
   
 ];
 

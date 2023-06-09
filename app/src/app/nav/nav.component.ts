@@ -29,13 +29,6 @@ export class NavComponent implements OnInit {
     }
     )
 
-
-
-
-
-
-
-
   }
 
   isLogin: boolean = false;
