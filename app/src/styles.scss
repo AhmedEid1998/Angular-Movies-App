@@ -5,6 +5,7 @@ body{
     background-color: #131722;
     color: white;
     font-family: 'Montserrat Alternates', sans-serif;
+    overflow: hidden;
 }
 
 a,a:hover
@@ -64,13 +65,23 @@ nav h3{
 }
 
 
+*::-webkit-scrollbar{
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #24baef;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-button{
+  background-color: #24baef;
+  width: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 
 
 // spinner 
-
-body{
-    overflow: hidden;
-}
 
 .loading{
     position: fixed;

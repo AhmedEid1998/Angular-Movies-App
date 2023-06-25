@@ -8,11 +8,6 @@ declare var $ :any;
   styleUrls: ['./nav.component.scss'],
 })
 
-
-// let drp = document.getElementsByClassName('drp')
-//       drp.onclick = function (){
-//       drp.classList.toggle('drping')
-// }
 export class NavComponent implements OnInit {
 
 

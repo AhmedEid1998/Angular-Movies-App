@@ -131,8 +131,6 @@
         transform: translateX(15%);
     }
 
-
-    
     .nav-bar{
         height: 0;
         position: absolute;
@@ -165,7 +163,7 @@
     }
 
     .nav-bar.active{
-        height: 450px;
+        height: 300px;
     }
 
     .nav-bar.active ul {

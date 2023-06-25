@@ -1,5 +1,27 @@
 
 
+.links{
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    .product{
+        color: #24baef;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover{
+            background-color: #24baef;
+            color: #131722;
+        }
+    }
+    .active{
+        background-color: #24baef;
+        color: #131722;
+        cursor: context-menu;
+    }
+}
+
 
 @media all  and (min-width: 1000px) {
 
