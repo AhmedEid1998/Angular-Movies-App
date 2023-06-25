@@ -37,8 +37,6 @@ export class NavComponent implements OnInit {
       }
     });
 
-
-
     $('.hamburger').click( function(){
       $('.nav-bar').toggleClass('active')
       $('.hamburger .line').toggleClass('hamClr')
@@ -47,12 +45,15 @@ export class NavComponent implements OnInit {
       $('.hamburger .l3').toggleClass('l3x')
     })
 
-
-
+    window.onscroll = ()=>{
+      $('.nav-bar').removeClass('active')
+      $('.hamburger .line').removeClass('hamClr')
+      $('.hamburger .l1').removeClass('l1x')
+      $('.hamburger .l2').removeClass('l2x')
+      $('.hamburger .l3').removeClass('l3x')
+    }
 
   }
-
-
 
   logoutBridge() {
     this._AuthService.logout();
