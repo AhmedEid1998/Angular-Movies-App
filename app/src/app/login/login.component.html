@@ -26,6 +26,13 @@
             <p *ngIf="loginForm.get('rePassword')?.getError('passwordMatch')" class="mb-0">Repassword Must Matched To Password</p>
         </div> 
 
-        <button [disabled]="loginForm.invalid" class="btn btn-info my-5 fw-bold">Login</button>  
+        <button [disabled]="loginForm.invalid" class="btn btn-info mt-5 mb-3 fw-bold">Login</button>  
+        <!-- <a routerLink="/register" title="Go to Login Page" class="link-info">Register</a> -->
+        <div>
+            <p class="d-inline my-0 fw-bold ">Don't Have Account ? .. Click Here</p>
+            <span class="ms-3">
+            <a routerLink="/register" title="Go To Registeration Page" class="link-info">Register</a>
+            </span>
+        </div>
     </form>
 </div>

@@ -43,9 +43,10 @@
 
         <button title="Click To Register" [disabled]="registerForm.invalid" class="btn btn-info mb-4 mt-5 fw-bold">Register</button>
         <div>
-            <p class="d-inline my-0 fw-bold ">If You Already Have An Account .. Click Here</p>
+            <p class="d-inline my-0 fw-bold ">Already Have Account ? .. Click Here</p>
             <span class="ms-3">
-            <button (click)="btnLogin()" title="Go to Login Page" class="btn btn-info fw-bold">Login</button>
+            <!-- <button (click)="btnLogin()" title="Go to Login Page" class="btn btn-info fw-bold">Login</button> -->
+            <a routerLink="/login" title="Go to Login Page" class="link-info">Login</a>
             </span>
         </div>
     </form>

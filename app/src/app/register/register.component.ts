@@ -46,9 +46,9 @@ export class RegisterComponent {
     }
   }
 
-  btnLogin(){
-      this._Router.navigate(['/login']);
-  }
+  // btnLogin(){
+  //     this._Router.navigate(['/login']);
+  // }
 
   submitRegister(forminfo: FormGroup) {
     this._AuthService.register(forminfo.value).subscribe(

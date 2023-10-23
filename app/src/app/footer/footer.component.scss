@@ -1,0 +1,42 @@
+
+footer{
+    margin: 0 0 ;
+    padding: 10px 0;
+    .container{
+        padding: 20px 20px;
+        border: solid 1px gray;
+        h3{
+            cursor: context-menu;
+        }
+        ul{
+            margin-top: 10px;
+            li{
+                list-style: none;
+                margin-bottom: 10px;
+                cursor: pointer;
+                width: max-content;
+                transition: 0.3s ease-in-out;
+                letter-spacing: 1px;
+                font-size: 1.2rem;
+                &:hover{
+                    transform: translateX(10px);
+                }
+            }
+        }
+        .copRigh{
+            p{
+                text-align: center;
+                font-size: 1.4rem;
+                span{
+                    a{
+                        color: #a1c7ff !important;
+                        transition: 0.2s ease-in-out;
+                        &:hover{
+                        color: #0d6efd !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

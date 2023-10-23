@@ -19,6 +19,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PeopleComponent } from './people/people.component';
 import { PeopledetailsComponent } from './peopledetails/peopledetails.component';
 import { TvdetailsComponent } from './tvdetails/tvdetails.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -39,10 +40,11 @@ import { TvdetailsComponent } from './tvdetails/tvdetails.component';
     PeopleComponent,
     PeopledetailsComponent,
     TvdetailsComponent,
+    FooterComponent,
     
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
